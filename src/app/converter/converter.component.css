@@ -1,58 +1,124 @@
-/* Background Styling */
-.background {
-  background: linear-gradient(to bottom, #ff7e5f, #feb47b, #83a4d4, #b6fbff);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Roboto', sans-serif;
-}
-
-.title-bar {
-  display: flex; /* Enables flexbox for centering */
-  justify-content: center; /* Horizontally centers the content */
-  align-items: center; /* Vertically centers the content */
-  height: 60px; /* Optional: Adjust height for better appearance */
-  font-size: 24px; /* Optional: Adjust font size for readability */
-  font-weight: bold; /* Optional: Makes the title bold */
-  text-align: center; /* Ensures text alignment */
-}
-
-/* Container */
-.container {
-  width: 90%;
-  max-width: 500px;
-  margin: auto;
-  text-align: center;
-}
-
-/* Card Styling */
-.card {
-  padding: 20px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Result Display Box */
-.result-display {
-  margin-top: 20px;
-}
-
-.result-box {
-  margin: 10px 0;
-  padding: 10px;
-  background: #f7f7f7;
-  border-radius: 8px;
-  font-size: 18px;
-  color: #333;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Button Hover Effect */
-button:hover {
-  background: #1565c0;
-  color: white;
-  transition: 0.3s ease;
-}
+/* Global Styles */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b, #83a4d4, #b6fbff);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Background Styling */
+  .background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: inherit;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b, #83a4d4, #b6fbff);
+  }
+  
+  /* Title Bar Styling */
+  .title-bar {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 90px; 
+    font-size: 30px; 
+    font-weight: bold; 
+    text-align: center; 
+    background: linear-gradient(to left, #b6fbff, #feb47b, #83a4d4, #b6fbff);
+    color: #333;
+    width: 100%;
+  }
+  
+  /* Container Styling */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Card Styling */
+  .card {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    margin-top: auto;
+  }
+  
+  /* Heading Styling */
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Error Message Styling */
+  .error-message {
+    color: #e53935;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Field Styling */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Container Styling */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Button Styling */
+  mat-raised-button {
+    width: 48%;
+  }
+  
+  /* Result Display Styling */
+  .result-display {
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px;
+    background: #e3f2fd;
+    border-radius: 8px;
+  }
+  
+  /* Individual Result Box Styling */
+  .result-box {
+    background: #ffffff;
+    border: 1px solid #cfd8dc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* Result Display Heading */
+  .result-display h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  

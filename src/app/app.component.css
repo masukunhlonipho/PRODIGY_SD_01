@@ -1,0 +1,15 @@
+/* Centering content */
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+  }
+  
+  app-converter {
+    width: 100%;
+  }
+  

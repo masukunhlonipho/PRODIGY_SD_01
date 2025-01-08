@@ -1,16 +1,22 @@
 <div class="background">
   <mat-toolbar color="primary" class="title-bar">
-    🌡️ Temperature Converter
+    🌡️Temperature Converter🌡️
   </mat-toolbar>
 
   <div class="container">
     <mat-card class="card">
       <h2>Convert Temperature</h2>
+
+      <!-- Error Message Display -->
+      <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+      <!-- Temperature Input Field -->
       <mat-form-field appearance="outline">
         <mat-label>Enter Temperature</mat-label>
-        <input matInput [(ngModel)]="temperature" type="number" />
+        <input matInput [(ngModel)]="temperature" type="text" />
       </mat-form-field>
 
+      <!-- Unit Selection Field -->
       <mat-form-field appearance="outline">
         <mat-label>Select Unit</mat-label>
         <mat-select [(ngModel)]="unit">
@@ -20,11 +26,18 @@
         </mat-select>
       </mat-form-field>
 
-      <button mat-raised-button color="primary" (click)="convertTemperature()">
-        Convert
-      </button>
+      <!-- Action Buttons -->
+      <div class="button-container">
+        <button mat-raised-button color="primary" (click)="convertTemperature()">
+          Convert
+        </button>
+        <button mat-raised-button color="warn" (click)="clearForm()">
+          Reset
+        </button>
+      </div>
     </mat-card>
 
+    <!-- Converted Results Display -->
     <div *ngIf="results.length > 0" class="result-display">
       <h3>Converted Values:</h3>
       <div class="result-box" *ngFor="let result of results">
