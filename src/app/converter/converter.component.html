@@ -1,45 +1,35 @@
-<mat-toolbar color="primary">
-    Temperature Converter
+<div class="background">
+  <mat-toolbar color="primary" class="title-bar">
+    🌡️ Temperature Converter
   </mat-toolbar>
-  
+
   <div class="container">
-    <mat-card>
+    <mat-card class="card">
       <h2>Convert Temperature</h2>
-      <form>
-        <!-- Input Field for Temperature -->
-        <mat-form-field appearance="outline" class="full-width">
-          <mat-label>Enter Temperature</mat-label>
-          <input
-            matInput
-            type="number"
-            placeholder="e.g., 25"
-            [(ngModel)]="temperature"
-            name="temperature"
-            required
-          />
-        </mat-form-field>
-  
-        <!-- Dropdown for Unit Selection -->
-        <mat-form-field appearance="outline" class="full-width">
-          <mat-label>Select Unit</mat-label>
-          <mat-select [(ngModel)]="unit" name="unit" required>
-            <mat-option value="Celsius">Celsius</mat-option>
-            <mat-option value="Fahrenheit">Fahrenheit</mat-option>
-            <mat-option value="Kelvin">Kelvin</mat-option>
-          </mat-select>
-        </mat-form-field>
-  
-        <!-- Convert Button -->
-        <button mat-raised-button color="primary" (click)="convertTemperature()">
-          Convert
-        </button>
-      </form>
-  
-      <!-- Display Converted Results -->
-      <div *ngIf="results.length">
-        <h3>Converted Values:</h3>
-        <p *ngFor="let result of results">{{ result }}</p>
-      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Temperature</mat-label>
+        <input matInput [(ngModel)]="temperature" type="number" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Select Unit</mat-label>
+        <mat-select [(ngModel)]="unit">
+          <mat-option value="Celsius">Celsius</mat-option>
+          <mat-option value="Fahrenheit">Fahrenheit</mat-option>
+          <mat-option value="Kelvin">Kelvin</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="convertTemperature()">
+        Convert
+      </button>
     </mat-card>
+
+    <div *ngIf="results.length > 0" class="result-display">
+      <h3>Converted Values:</h3>
+      <div class="result-box" *ngFor="let result of results">
+        {{ result }}
+      </div>
+    </div>
   </div>
-  
+</div>
